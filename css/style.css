@@ -324,6 +324,21 @@ header.sticky {
 	border-radius: 12px;
 }
 
+.layer {
+	display: flex;
+	padding-top: 10px;
+}
+
+.layer a {
+	color: var(--text-color);
+	padding-right: 30px;
+	transition: .4s;
+}
+
+.layer a:hover {
+	color: var(--main-color);
+}
+
 /* .layer {
 	background: transparent;
 	height: 100%;
@@ -734,6 +749,4 @@ header.sticky {
 	.contact .action form input[type="email"] {
 		width: 310px;
 	}
-
-
 }
