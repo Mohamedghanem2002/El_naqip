@@ -248,12 +248,10 @@ header.sticky {
 
 
 .about-img img {
-
 	max-width: 100%;
-	width: 540px;
-
+	width: 400px;
 	height: auto;
-	border-radius: 50%;
+	border-radius: 10px;
 }
 
 .about-text h2 {
