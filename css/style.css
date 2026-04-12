@@ -24,10 +24,11 @@
     --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
-body {
+html, body {
     background: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
+    width: 100%;
     position: relative;
 }
 
@@ -307,6 +308,7 @@ header.sticky {
     grid-template-columns: repeat(auto-fit, minmax(320px, auto));
     grid-gap: 2rem;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -336,6 +338,7 @@ header.sticky {
     grid-template-columns: repeat(auto-fit, minmax(380px, auto));
     grid-gap: 2.5rem;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -670,13 +673,43 @@ header.sticky {
         max-width: 400px;
     }
 
+    .prizes-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    }
+
+    .portfolio-content {
+        grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    }
+
     .col img {
         height: 450px;
     }
 }
 
 @media only screen and (max-width: 700px) {
+    .modal {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
     .modal-content {
-        width: 95%;
+        width: 92%;
+        margin-top: 40px;
+    }
+
+    #caption {
+        width: 92%;
+        padding: 15px 20px;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-top: 20px;
+    }
+
+    .close {
+        top: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 35px;
     }
 }
