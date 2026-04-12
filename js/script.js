@@ -18,8 +18,10 @@ window.onscroll = () => {
 };
 
 const sr = ScrollReveal({
-  distance: "45px",
-  duration: 2700,
+  distance: "60px",
+  duration: 2000,
+  delay: 200,
+  ease: 'cubic-bezier(0.5, 0, 0, 1)',
   reset: true,
 });
 
@@ -39,7 +41,7 @@ let imgs = document.querySelectorAll(".imags");
 
 Array.from(imgs).forEach((img) => {
   img.onclick = function () {
-    // modalImg.src = this.src
+    modalImg.src = this.src;
     modeal.style.display = "block";
     captionText.innerHTML = this.alt;
   };
@@ -47,3 +49,23 @@ Array.from(imgs).forEach((img) => {
 close.onclick = function () {
   modeal.style.display = "none";
 };
+
+// Close modal when clicking outside of the image
+window.addEventListener("click", function (event) {
+  if (event.target === modeal) {
+    modeal.style.display = "none";
+  }
+});
+
+// Close modal when pressing the Escape key
+window.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && modeal.style.display === "block") {
+    modeal.style.display = "none";
+  }
+});
+
+// Scroll Top Button logic
+const scrollTop = document.querySelector('.scroll-top');
+window.addEventListener('scroll', () => {
+  scrollTop.classList.toggle('active', window.scrollY > 150);
+});
